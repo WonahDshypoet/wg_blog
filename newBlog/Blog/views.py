@@ -9,7 +9,7 @@ def blog(request):
 
     template_name = 'blog.html'
 
-    if request.method == GET:
+    if request.method == 'GET':
 
         posts = Post.from_blog('123')
 
@@ -17,6 +17,6 @@ def blog(request):
             print(post)
 
         context = {
-            'post': post,
+            'post': posts,
         }
         return render(request, template_name, context)

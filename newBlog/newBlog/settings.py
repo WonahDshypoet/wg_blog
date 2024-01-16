@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'newBlog.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'fullstack',
@@ -85,6 +85,14 @@ DATABASES = {
             'host': 'mongodb://127.0.0.1:27017/',
             'authSource': 'admin',
         }
+    }
+}'''
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / "db.sqlite3",
     }
 }
 
